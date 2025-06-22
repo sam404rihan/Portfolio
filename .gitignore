@@ -1,7 +1,11 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# dependencies
+# dependencies - more aggressive patterns
 /node_modules
+node_modules/
+**/node_modules/
+**/node_modules/**
+node_modules
 /.pnp
 .pnp.*
 .yarn/*
@@ -16,9 +20,13 @@
 # next.js
 /.next/
 /out/
+.next/
+**/.next/
+**/.next/**
 
 # production
 /build
+/dist
 
 # misc
 .DS_Store
@@ -42,3 +50,17 @@ next-env.d.ts
 
 # Local Netlify folder
 .netlify
+
+# Cache and temporary files
+.cache/
+**/.cache/**
+/tmp/
+tmp/
+
+# Large files
+**/*.log
+**/*.zip
+**/*.gz
+**/*.tar
+**/*.7z
+**/*.rar
